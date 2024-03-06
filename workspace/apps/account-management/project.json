@@ -1,0 +1,24 @@
+{
+  "name": "account-management",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/account-management/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "account-management:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "account-management:build:development"
+        },
+        "production": {
+          "buildTarget": "account-management:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}

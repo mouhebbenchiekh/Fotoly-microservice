@@ -1,0 +1,24 @@
+{
+  "name": "fotoly",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/fotoly/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "fotoly:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "fotoly:build:development"
+        },
+        "production": {
+          "buildTarget": "fotoly:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
